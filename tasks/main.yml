@@ -15,3 +15,6 @@
 
 - include: server.yml
   when: inventory_hostname == freeipa_master or inventory_hostname in freeipa_replicas
+
+- include: lb.yml
+  when: inventory_hostname in freeipa_lb
