@@ -7,7 +7,12 @@
       - https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
     state: present
 
-- name: Install or update haproxy
+- name: Remove old haproxy
   ansible.builtin.yum:
     name: haproxy
-    state: latest
+    state: absent
+
+- name: Install ius haproxy
+  ansible.builtin.yum:
+    name: haproxy22
+    state: present
