@@ -6,8 +6,8 @@
     -r "{{ freeipa_domain | upper }}"
     -n "{{ freeipa_domain }}"
     --server "{{ freeipa_master }}"
-    -P "{{ directory_admin_username | quote }}"
-    -w "{{ kerberos_admin_password | quote }}"
+    -P "{{ directory_admin_username }}"
+    -w "{{ kerberos_admin_password }}"
     --hostname "{{ inventory_hostname }}"
     --ip-address "{{ frontnet_addr }}"
     -N --setup-dns --auto-forwarders --forward-policy only

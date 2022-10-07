@@ -5,8 +5,8 @@
     ipa-server-install -U
     -r "{{ freeipa_domain | upper }}"
     -n "{{ freeipa_domain }}"
-    -p "{{ directory_admin_password | quote }}"
-    -a "{{ kerberos_admin_password | quote }}"
+    -p "{{ directory_admin_password }}"
+    -a "{{ kerberos_admin_password }}"
     --hostname "{{ inventory_hostname }}"
     --ip-address "{{ frontnet_addr }}"
     -N --setup-dns --auto-forwarders --forward-policy only
