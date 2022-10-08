@@ -16,3 +16,8 @@
   ansible.builtin.yum:
     name: haproxy22
     state: present
+
+- name: Install certbot
+  ansible.builtin.yum:
+    name: certbot
+    state: present
